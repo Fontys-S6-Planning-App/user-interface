@@ -11,6 +11,6 @@ export class BoardService {
   constructor(private http: HttpClient) { }
 
   public getAllBoards(): Observable<Board[]> {
-    return this.http.get<Board[]>('https://localhost:7186/board');
+    return this.http.get<Board[]>('https://board-service.marktempelman.duckdns.org/board');
   }
 }
