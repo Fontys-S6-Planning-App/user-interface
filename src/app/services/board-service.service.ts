@@ -8,9 +8,11 @@ import {Board} from '../entities/board.entity';
 })
 export class BoardService {
 
+  static readonly baseUrl: string = 'https://board-service.marktempelman.duckdns.org';
+
   constructor(private http: HttpClient) { }
 
   public getAllBoards(): Observable<Board[]> {
-    return this.http.get<Board[]>('https://board-service.marktempelman.duckdns.org/board');
+    return this.http.get<Board[]>(BoardService.baseUrl + '/board');
   }
 }
