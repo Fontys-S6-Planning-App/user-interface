@@ -1,1 +1,9 @@
-<p *ngFor="let board of boards | async">{{board.title}}</p>
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; padding: 10px">
+  <div *ngFor="let board of boards | async" class="card border-primary mb-3">
+    <div class="card-body">
+      <h4 class="card-title">{{board.title}}</h4>
+      <p class="card-text">Placeholder description</p>
+    </div>
+  </div>
+</div>
+

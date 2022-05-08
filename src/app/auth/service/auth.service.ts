@@ -46,4 +46,8 @@ export class AuthService {
   public register(): void {
     this.keycloakService.register();
   }
+
+  public clearToken(): void {
+    this.keycloakService.clearToken();
+  }
 }
