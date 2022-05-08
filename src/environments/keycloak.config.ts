@@ -2,7 +2,7 @@ import { KeycloakConfig} from 'keycloak-js';
 
 const keycloakConfig: KeycloakConfig = {
   url: 'https://keycloak.marktempelman.duckdns.org/auth/',
-  realm: 'Planning App',
+  realm: 'planning-app',
   clientId: 'angular-web-client',
 };
 

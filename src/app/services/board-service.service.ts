@@ -9,6 +9,7 @@ import {Board} from '../entities/board.entity';
 export class BoardService {
 
   static readonly baseUrl: string = 'https://board-service.marktempelman.duckdns.org';
+  // static readonly baseUrl: string = 'https://localhost:7186';
 
   constructor(private http: HttpClient) { }
 
