@@ -23,4 +23,8 @@ export class BoardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  deleteBoard(id: number): void {
+    this.boardService.deleteBoard(id);
+  }
+
 }

@@ -7,18 +7,24 @@ import {AppRoutingModule} from './app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
 import {AuthModule} from './auth/auth.module';
 import { HeaderComponent } from './components/header/header.component';
+import { CreateBoardComponent } from './components/create-board/create-board.component';
+import {FormsModule} from '@angular/forms';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
     AppComponent,
     BoardComponent,
-    HeaderComponent
+    HeaderComponent,
+    CreateBoardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    AuthModule
+    AuthModule,
+    FormsModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

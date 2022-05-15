@@ -2,11 +2,14 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {BoardComponent} from './components/board/board.component';
 import {AuthGuard} from './auth/auth.guard';
+import {CreateBoardComponent} from './components/create-board/create-board.component';
 
 const routes: Routes =
 [
   { path: '', redirectTo: 'overview', pathMatch: 'full' },
   { path: 'overview', component: BoardComponent, canActivate: [AuthGuard] },
+  { path: 'create', component: CreateBoardComponent, canActivate: [AuthGuard] },
+  { path: '**', redirectTo: 'overview' }
 ];
 
 @NgModule({

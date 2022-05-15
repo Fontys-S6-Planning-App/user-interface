@@ -16,4 +16,12 @@ export class BoardService {
   public getAllBoards(): Observable<Board[]> {
     return this.http.get<Board[]>(BoardService.baseUrl + '/board');
   }
+
+  public saveBoard(board: Board): void {
+    this.http.post(BoardService.baseUrl + '/board', board).subscribe();
+  }
+
+  public deleteBoard(id: number): void {
+    this.http.delete(BoardService.baseUrl + '/board/' + id).subscribe();
+  }
 }

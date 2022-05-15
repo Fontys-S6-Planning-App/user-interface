@@ -1,0 +1,11 @@
+<form style="padding: 10px">
+  <fieldset>
+    <div class="card bg-secondary border-primary mb-3" style="max-width: 80rem; margin: 0 auto">
+      <label for="dishName">Board title</label>
+      <input [(ngModel)]="board.title" name="dishName" type="text" class="form-control" id="dishName" placeholder="Title">
+    </div>
+    <div class="card mb-3" style="max-width: 80rem; margin: 0 auto">
+      <button (click)="saveBoard()" type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </fieldset>
+</form>
