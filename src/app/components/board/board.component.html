@@ -1,5 +1,5 @@
 <div style="padding: 10px">
-  <button type="button"  class="btn btn-primary" routerLink="/create">Create Board</button>
+  <button type="button"  class="btn btn-primary" routerLink="/board/create">Create Board</button>
 </div>
 <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; padding: 10px">
   <div *ngFor="let board of boards | async" class="card border-primary mb-3">
@@ -7,6 +7,7 @@
       <h4 class="card-title">{{board.title}}</h4>
       <p class="card-text">Placeholder description</p>
       <button type="button" class="btn btn-danger" (click)="deleteBoard(board.id)">Delete</button>
+      <button type="button"  class="btn btn-primary" routerLink="/board/update/{{board.id}}">Edit Board</button>
     </div>
   </div>
 </div>

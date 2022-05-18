@@ -24,4 +24,8 @@ export class BoardService {
   public deleteBoard(id: number): void {
     this.http.delete(BoardService.baseUrl + '/board/' + id).subscribe();
   }
+
+  public updateBoard(board: Board): void {
+    this.http.put(BoardService.baseUrl + '/board', board).subscribe();
+  }
 }

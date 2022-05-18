@@ -10,13 +10,15 @@ import { HeaderComponent } from './components/header/header.component';
 import { CreateBoardComponent } from './components/create-board/create-board.component';
 import {FormsModule} from '@angular/forms';
 import {MatIconModule} from '@angular/material/icon';
+import { UpdateBoardComponent } from './components/update-board/update-board.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BoardComponent,
     HeaderComponent,
-    CreateBoardComponent
+    CreateBoardComponent,
+    UpdateBoardComponent
   ],
   imports: [
     BrowserModule,
