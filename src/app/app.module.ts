@@ -11,6 +11,7 @@ import { CreateBoardComponent } from './components/create-board/create-board.com
 import {FormsModule} from '@angular/forms';
 import {MatIconModule} from '@angular/material/icon';
 import { UpdateBoardComponent } from './components/update-board/update-board.component';
+import { BoardDetailsComponent } from './components/board-details/board-details.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { UpdateBoardComponent } from './components/update-board/update-board.com
     BoardComponent,
     HeaderComponent,
     CreateBoardComponent,
-    UpdateBoardComponent
+    UpdateBoardComponent,
+    BoardDetailsComponent
   ],
   imports: [
     BrowserModule,
