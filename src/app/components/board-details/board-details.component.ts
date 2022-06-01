@@ -36,6 +36,10 @@ export class BoardDetailsComponent implements OnInit {
     this.listService.deleteList(id);
   }
 
+  deleteTask(id: number): void {
+    this.taskService.deleteTask(id);
+  }
+
   createList(): void {
     // create a new list
     const list = new class implements List {

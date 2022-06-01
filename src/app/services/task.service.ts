@@ -20,4 +20,8 @@ export class TaskService {
   public saveTask(task: TaskEntity): void {
     this.http.post(TaskService.baseUrl + '/tasks', task).subscribe();
   }
+
+  public deleteTask(id: number): void {
+    this.http.delete(TaskService.baseUrl + '/tasks/' + id).subscribe();
+  }
 }
