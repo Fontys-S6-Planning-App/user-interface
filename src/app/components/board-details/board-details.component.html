@@ -1,4 +1,4 @@
-<div *ngFor="let list of lists | async" style="width: 20%; padding: 10px; float: left;" class="list-group">
+<div *ngFor="let list of lists" style="width: 20%; padding: 10px; float: left;" class="list-group">
   <a class="list-group-item list-group-item-action flex-column align-items-start active">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">{{list.name}}</h5>
@@ -7,10 +7,10 @@
   </a>
   <a class="list-group-item list-group-item-action flex-column align-items-start">
     <div style="padding: 5px">
-      <div class="card border-primary mb-3">
+      <div class="card border-primary mb-3" *ngFor="let task of list.tasks">
         <div class="card-body">
-          <h4 class="card-title">Task title</h4>
-          <p class="card-text">Task description</p>
+          <h4 class="card-title">{{task.name}}</h4>
+          <p class="card-text">{{task.description}}</p>
         </div>
       </div>
     </div>
