@@ -16,4 +16,8 @@ export class TaskService {
     console.log(TaskService.baseUrl + '/tasks/' + listId);
     return this.http.get<TaskEntity[]>(TaskService.baseUrl + '/tasks/' + listId);
   }
+
+  public saveTask(task: TaskEntity): void {
+    this.http.post(TaskService.baseUrl + '/tasks', task).subscribe();
+  }
 }

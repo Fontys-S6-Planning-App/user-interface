@@ -13,6 +13,21 @@
           <p class="card-text">{{task.description}}</p>
         </div>
       </div>
+      <div class="card border-primary mb-3">
+        <div class="card-body">
+          <input style="font-size: 16px" class="form-control me-sm-2" type="text" placeholder="Task name" [(ngModel)]="newTaskName">
+          <input style="font-size: 14px" class="form-control me-sm-2" type="text" placeholder="Task description" [(ngModel)]="newTaskDescription">
+        </div>
+        <button type="button" class="btn btn-success" (click)="createTask(list.id)">Add</button>
+      </div>
+    </div>
+  </a>
+</div>
+<div style="width: 20%; padding: 10px; float: left;" class="list-group">
+  <a class="list-group-item list-group-item-action flex-column align-items-start active">
+    <div class="d-flex w-100 justify-content-between">
+      <input class="form-control me-sm-2" type="text" placeholder="List name" [(ngModel)]="newListName">
+      <button type="button" class="btn btn-success" (click)="createList()">Add</button>
     </div>
   </a>
 </div>
